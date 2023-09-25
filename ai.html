@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google (AI)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <!-- first part, top -->
+    <nav>
+                  
+        <div class="first-container">
+            <!-- chi siamo -->
+            <a href="https://about.google/" class="links light-links">About</a>
+            <!-- Google Store -->
+            <a href="https://store.google.com/" class="links light-links">Store</a>
+        </div>
+        <div class="second-container">
+            <!-- 1 -->
+            <div class="example-service-container">
+                <!-- Gmail -->
+                <a href="https://mail.google.com/" class="links white-links">Gmail</a>
+                <!-- Immagini -->
+                <a href="https://images.google.com/" class="links white-links">Images</a>
+            </div>
+            <!-- let's create a gap between -->
+
+            <!-- 2 -->
+            <div class="icon-container">
+                <!-- menu -->
+                <div>
+                    <img src="./images/menu.svg" alt="">
+                </div>
+                <!-- my logo -->
+                <div>
+                    <img class="profile-icon" src="./images/profileIcon.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- second part, centered -->
+    <div class="center-container">
+        <div class="logo-container">
+            <img src="./images/Google-Icon.png" alt="Google logo">
+        </div>
+
+        <div class="searchbar-container">
+            <a href="#open-modal"><button disabled="true" id="button" onclick="{request()}"><img src="./images/search.svg" alt=""></button></a>
+
+              <div id="open-modal" class="modal-window">
+                <div>
+                  <a href="https://dhyan99.is-a.dev/ai" title="Close" class="modal-close">Close</a>
+                  <h1>Response</h1>
+                  <div id="modal-content">Loading...</div>
+              </div>
+              </div>
+
+            <input type="text" value="" onchange="searchBTN()" id="prompt" placeholder="Type prompt and press 'ENTER'" form="search-form">
+            <img src="./images/microphone.svg" alt="">
+        </div>  
+
+        <div class="buttons-container">
+            <input type="submit" value="Google Search">
+            <input type="submit" value="I'm Feeling Lucky">
+        </div>
+    </div>
+
+
+    <!-- third part, bottom -->
+    <footer>
+        <div class=" first-footer ">Australia</div>
+
+        <div class="footer-links ">
+            <!-- 1 -->
+            <div class="first-links-container ">
+                <a href="#" id="credids">I run out of credits in </a>
+            </div>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Oct 31, 2023 23:59:59").getTime();
+                
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                
+                  // Get today's date and time
+                  var now = new Date().getTime();
+                
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+                
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                  // Display the result in the element with id="demo"
+                  document.getElementById("credids").innerHTML = "I run out of credits in " + days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                
+                  // If the count down is finished, write some text
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "I ran out of credits 😭";
+                  }
+                }, 1000);
+                </script>
+            <!-- 2 -->
+            <div class="second-links-container ">
+                <a href="https://dhyan99.is-a.dev">Created by Dhyan99</a>
+            </div>
+            <!-- 3 -->
+            <div class="third-links-container ">
+                <a href="https://buymeacoffee.com/Dhyan99">donate so I can buy more credits</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
