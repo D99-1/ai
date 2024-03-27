@@ -19,7 +19,7 @@ function request() {
     $("#modal-content").text("Loading...")
     $.ajax({
         type: "POST",
-        url: "https://api.dhyan99.is-a.dev/ai",
+        url: "https://d99api.vercel.app/ai",
         data: { 
             "data":`${$("#prompt").val()}`
         },
