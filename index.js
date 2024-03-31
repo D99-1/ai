@@ -24,7 +24,7 @@ function request() {
             "data":`${$("#prompt").val()}`
         },
         success: function(result) {
-            $("#modal-content").text(result)
+            $("#modal-content").text(result.text)
         },
         error: function(result) {
             alert(result);
